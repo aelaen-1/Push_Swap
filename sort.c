@@ -21,8 +21,7 @@ static void push_b_on_target(t_stack_node **b, t_stack_node **a)
     pa(b, a);
 }
 
-//changes
-static void head_min(t_stack_node **a)
+static void min_on_top(t_stack_node **a)
 {
     t_stack_node    *min_a;
 
@@ -56,7 +55,7 @@ void    main_algo(t_stack_node **a, t_stack_node **b)
         init_b(*a, *b);
         push_b_on_target(b, a);
     }
-    head_min(a);
+    min_on_top(a);
 }
 
 void    sort_3(t_stack_node **stack)
